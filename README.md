@@ -42,64 +42,64 @@
 
 #### Update and test
 
-|                           Update                            | Link or Note                                                   | Result |
-| :---------------------------------------------------------: | -------------------------------------------------------------- | ------ |
-| 1.add RadeonSensor.kext  +  SMCRadeonGPU.kext + Application | [PRIME H610M-CS D4](https://github.com/aluveitie/RadeonSensor) | OK     |
-|            1.change IntelBluetootchFirmware.kext            | v2.3.0                                                         | NG     |
-|                  1.change AirpotItlwm.kext                  | v2.3.0-alpha                                                   | NG     |
-|                1.change IntelBTPatcher.kext                 | v2.6.8                                                         | NG     |
-|                 1.change BlueToolFixup.kext                 | v2.6.8                                                         | NG     |
-|                      1.add itlwm.kext                       |                                                                | NG     |
-|                  2. add FeatureUnlock.kext                  | v1.1.5 https://github.com/acidanthera/FeatureUnlock/releases   | Keep   |
-|                     2.add AppleIGC.kext                     | https://github.com/SongXiaoXi/AppleIGC/releases/tag/v1.4       | Keep   |
-|                2. change   AirpotItlwm.kext                 |                                                                | NG     |
-|           2. change IntelBluetootchFirmware.kext            |                                                                | NG     |
-|                2. change IntelBTPatcher.kext                |                                                                | NG     |
-|                2. change BlueToolFixup.kext                 |                                                                | NG     |
-|                    2. change itlwm.kext                     |                                                                | NG     |
-|                3.set: ResizeAppleGpuBars->0                 |                                                                | Keep   |
-|     3.add PciRoot(0x0)/Pci(0x1F,0x3) audio, layout =11      |                                                                | Keep   |
-|         3.boot arg add :  agdpmod=pikera -wegnoigpu         | to disable igpu                                                | Keep   |
-|           3. change to Mac Pro 2019  (MacPro7,1)            | geekbench gpu tăng, cpu thì giảm, hêt hiên tuợng giật màn hình | Keep   |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
-|                                                             |                                                                |        |
+|                           Update                            | Link or Note                                                                          | Result |
+| :---------------------------------------------------------: | ------------------------------------------------------------------------------------- | ------ |
+| 1.add RadeonSensor.kext  +  SMCRadeonGPU.kext + Application | [PRIME H610M-CS D4](https://github.com/aluveitie/RadeonSensor)                        | OK     |
+|            1.change IntelBluetootchFirmware.kext            | v2.3.0                                                                                | NG     |
+|                  1.change AirpotItlwm.kext                  | v2.3.0-alpha                                                                          | NG     |
+|                1.change IntelBTPatcher.kext                 | v2.6.8                                                                                | NG     |
+|                 1.change BlueToolFixup.kext                 | v2.6.8                                                                                | NG     |
+|                      1.add itlwm.kext                       |                                                                                       | NG     |
+|                  2. add FeatureUnlock.kext                  | v1.1.5 https://github.com/acidanthera/FeatureUnlock/releases                          | Keep   |
+|                     2.add AppleIGC.kext                     | https://github.com/SongXiaoXi/AppleIGC/releases/tag/v1.4                              | Keep   |
+|                2. change   AirpotItlwm.kext                 |                                                                                       | NG     |
+|           2. change IntelBluetootchFirmware.kext            |                                                                                       | NG     |
+|                2. change IntelBTPatcher.kext                |                                                                                       | NG     |
+|                2. change BlueToolFixup.kext                 |                                                                                       | NG     |
+|                    2. change itlwm.kext                     |                                                                                       | NG     |
+|                3.set: ResizeAppleGpuBars->0                 |                                                                                       | Keep   |
+|     3.add PciRoot(0x0)/Pci(0x1F,0x3) audio, layout =11      |                                                                                       | Keep   |
+|         3.boot arg add :  agdpmod=pikera -wegnoigpu         | to disable igpu                                                                       | Keep   |
+|           3. change to Mac Pro 2019  (MacPro7,1)            | geekbench gpu tăng, cpu thì giảm, hêt hiên tuợng giật màn hình                        | Keep   |
+|     4. add cpufrienđaâprovier.kext,change cpufrine.kext     | https://github.com/htkj1011/i3-12100F-MSI-H610M-BOMBER-RX588-OC0.7.8/releases/tag/dev | Keep   |
+|               >hiệu năng không tăng đang kể.                |                                                                                       |        |
+|                     5. change PLUG.kext                     |                                                                                       | del    |
+|                      5. add SBUS kext                       |                                                                                       | del    |
+|                      5. add HPET kext                       |                                                                                       | del    |
+|                        5. GPRW kext                         |                                                                                       | del    |
+|               >hiệu năng không tăng đang kể.                |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
+|                                                             |                                                                                       |        |
 
 3. truớc 
 ![Alt text](image-1.png)
