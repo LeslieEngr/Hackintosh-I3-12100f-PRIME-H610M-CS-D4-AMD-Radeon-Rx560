@@ -72,7 +72,7 @@
 |                       7. Mapping USB                        | Cổng 6 (ngay phía trên jac 3.5 Microphone ) set type 255(bluetooth in)                |        |
 |                      7.add CPU Friend                       | max nhung gi co the                                                                   |        |
 |               7. Chinh config.plit giong link               | https://github.com/cuihairu/H610-i5-12400F-RX5600XT-Hackintosh                        |        |
-|                                                             |                                                                                       |        |
+|                   8.chỉnh cpufriendfriend                   | LFM: 08 ;EPP: 90; Perf Bias: 05 -> 1708 sing,5560 multi                               |        |
 |                                                             |                                                                                       |        |
 |                                                             |                                                                                       |        |
 |                                                             |                                                                                       |        |
