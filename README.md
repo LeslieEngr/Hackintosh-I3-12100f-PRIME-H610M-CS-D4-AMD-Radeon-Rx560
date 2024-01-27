@@ -1,11 +1,13 @@
 # Hackintosh-I3-12100f-PRIME-H610M-CS-D4-AMD-Radeon-Rx560
 
-## Information
+# Information
+
+## Software
     - Mac OS : Sonoma
     - Bootloader: OpenCore 0.9.7
 ![Alt text](image.png)
 
-### Hardware
+## Hardware
 
 | Component |        Variant        |
 | :-------: | :-------------------: |
@@ -20,7 +22,7 @@
 
 ---
 
-#### Kexts
+### Kexts
 
 |            Kext             | Version |
 | :-------------------------: | :-----: |
@@ -40,7 +42,7 @@
 |     RealtekRTL8111.kext     | v1.1.1  |
 
 
-#### Update and test
+### Update and test
 
 |                           Update                            | Link or Note                                                                          | Result |
 | :---------------------------------------------------------: | ------------------------------------------------------------------------------------- | ------ |
@@ -71,10 +73,10 @@
 |                 6. add user boot interface                  |                                                                                       | OK     |
 |                       7. Mapping USB                        | Cổng 6 (ngay phía trên jac 3.5 Microphone ) set type 255(bluetooth in)                |        |
 |                      7.add CPU Friend                       | max nhung gi co the                                                                   |        |
-|               7. Chinh config.plit giong link               | https://github.com/cuihairu/H610-i5-12400F-RX5600XT-Hackintosh                        |        |
-|                   8.chỉnh cpufriendfriend                   | LFM: 08 ;EPP: 90; Perf Bias: 05 -> 1708 sing,5560 multi                               |        |
-|                                                             |                                                                                       |        |
-|                                                             |                                                                                       |        |
+|               7. Chinh config.plit giong link               | https://github.com/cuihairu/H610-i5-12400F-RX5600XT-Hackintosh                        | OK     |
+|                   8.chỉnh cpufriendfriend                   | LFM: 08 ;EPP: 90; Perf Bias: 05 -> 1708 sing,5560 multi                               | Del    |
+|                   8.chỉnh cpufriendfriend                   | LFM: 14 ;EPP: 90; Perf Bias: 05 -> 1725 sing,5582 multi                               | Del    |
+|                   8.chỉnh cpufriendfriend                   | LFM: 14 ;EPP: 01; Perf Bias: 01 -> 1730 sing,5615 multi                               | Keep   |
 |                                                             |                                                                                       |        |
 |                                                             |                                                                                       |        |
 |                                                             |                                                                                       |        |
@@ -103,41 +105,10 @@
 
 
 
-# Một số Huớng dâẫn :
+# Manual
 ## Optimizing Power Management(7)
-### Define
-#### CPUFrinedFriend
-    - CPUFrendFrend là scrip python, giúp tối ưu hoá năng luợng cho Hackintosh
-    - Kiểm tra frequency vector cuủ X86PlatformPlugin phù hợp với cấu hình SMBIOS, tận dụng CPUFriend/ResourceConverter để tối ưu.
-    - Output : têp CPUFriendDataProvider.kext, ssdt_data.dsl/.aml files
-    - Xem hướng dẫn của CPUFriend để biết nên dùng hay không.
-#### LFM
-    - tần sô thấp nhất cuủ CPU khi máy không thực hiin tác vụ nào. Cpufriendfriend sẽ tối ưu tần số LFM,
-    - Nó là TDP-down trong trang thông tin của Intel, sau đó chuyển nó sang dạng Hex, vd :D 1300Mhz -> Hex , VD :
-                            ~~~ $ echo "obase=16; 13" | bc
-                            ~~~ D
-    - Nhap 0D de xet LFM la 1300Mhz, neu la 800MHz thi la 08.
-    - Theo Chat GPT, i3 12100F khong co TDP-down.
-#### EPP:Energy Performance Preference
-    - Quyet dinh toc do CPU, từ TDP-down -> Turbo. 
-
-| Hex  | Relative Profile    | Vietnamese Translation      |
-| ---- | ------------------- | --------------------------- |
-| 0x00 | Performance         | Hiệu năng toi da            |
-| 0x40 | Balance Performance | Cân bằng hiệu năng          |
-| 0x80 | Balance Power       | Cân bằng nguồn              |
-| 0xC0 | Max Power Saving    | Tiết kiệm năng lượng tối đa |
-
-#### Cai dat
-
-  1. Tai CPU Friend , CFF
-  2. Xác dịnh giá trị LFM : 
-
----
-
-Tham khảo :  XHCI-unsupported.kext	v0.9.2	https://github.com/RehabMan/OS-X-USB-Inject-All/tree/master/XHCI-unsupported.kext : kext hoat động với usb 
-USBToolBox.kext	v1.1.1	USBToolBox/kext
-UTBMap.kext	v1.1.1	USBToolBox/tool
-CPUFriend.kext
-CPUFrinedDAtaProvider.kext
-HibernationFixup.kext
+### CPUFriendFriend & CPUFriendDataProvider
+    - https://github.com/corpnewt/CPUFriendFriend
+    - https://dortania.github.io/OpenCore-Post-Install/universal/pm.html#lfm-low-frequency-mode
+### USB mapping: USBmap tool
+    - https://dortania.github.io/OpenCore-Post-Install/usb/intel-mapping/intel.html
